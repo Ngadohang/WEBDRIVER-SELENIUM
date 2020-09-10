@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41754" started-at="2020-09-10T05:27:52Z" finished-at="2020-09-10T05:28:34Z">
+  <suite name="Default suite" duration-ms="19288" started-at="2020-09-10T09:40:01Z" finished-at="2020-09-10T09:40:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41754" started-at="2020-09-10T05:27:52Z" finished-at="2020-09-10T05:28:34Z">
+    <test name="Default test" duration-ms="19288" started-at="2020-09-10T09:40:01Z" finished-at="2020-09-10T09:40:21Z">
       <class name="selenium.Topic_2_RunBrowerDriver">
-        <test-method status="FAIL" signature="TC_Run_on_Chrome()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@b97c004]" name="TC_Run_on_Chrome" duration-ms="90" started-at="2020-09-10T12:27:52Z" finished-at="2020-09-10T12:27:52Z">
+        <test-method status="FAIL" signature="TC_Run_on_Chrome()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@7921b0a2]" name="TC_Run_on_Chrome" duration-ms="100" started-at="2020-09-10T16:40:01Z" finished-at="2020-09-10T16:40:01Z">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html]]>
@@ -52,7 +52,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Run_on_Chrome -->
-        <test-method status="FAIL" signature="TC_Run_on_Edge_Chromium()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@b97c004]" name="TC_Run_on_Edge_Chromium" duration-ms="75" started-at="2020-09-10T12:27:52Z" finished-at="2020-09-10T12:27:52Z">
+        <test-method status="FAIL" signature="TC_Run_on_Edge_Chromium()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@7921b0a2]" name="TC_Run_on_Edge_Chromium" duration-ms="10" started-at="2020-09-10T16:40:01Z" finished-at="2020-09-10T16:40:01Z">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[The path to the driver executable must be set by the webdriver.edge.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/MicrosoftWebDriver. The latest version can be downloaded from http://go.microsoft.com/fwlink/?LinkId=619687]]>
@@ -97,7 +97,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Run_on_Edge_Chromium -->
-        <test-method status="PASS" signature="TC_Run_on_Firefox()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@b97c004]" name="TC_Run_on_Firefox" duration-ms="41432" started-at="2020-09-10T12:27:52Z" finished-at="2020-09-10T12:28:34Z">
+        <test-method status="PASS" signature="TC_Run_on_Firefox()[pri:0, instance:selenium.Topic_2_RunBrowerDriver@7921b0a2]" name="TC_Run_on_Firefox" duration-ms="19139" started-at="2020-09-10T16:40:01Z" finished-at="2020-09-10T16:40:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Run_on_Firefox -->
