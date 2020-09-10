@@ -58,7 +58,7 @@ public class UseXpath {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.id("email")).sendKeys("ngado29895gmail.com");
+		driver.findElement(By.id("email")).sendKeys("ngado29895 @ gmail");
 		driver.findElement(By.id("pass")).sendKeys("123456");
 		driver.findElement(By.id("send2")).click();
 		String emailErrorMessage2 = driver.findElement(By.xpath("//div[@id='advice-required-entry-email']")).getText();
