@@ -58,7 +58,7 @@ public class UseXpath {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.id("email")).sendKeys("ngado29895@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("ngado29895gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("123456");
 		driver.findElement(By.id("send2")).click();
 		String emailErrorMessage2 = driver.findElement(By.xpath("//div[@id='advice-required-entry-email']")).getText();
@@ -94,6 +94,17 @@ public class UseXpath {
 		Assert.assertEquals(note,"My Dashboard");
 		Assert.assertEquals(note1,"Hello, Automation Testing!");
 		Assert.assertEquals(note2,"Automation Testing automation_13@gmail.com");
+	}
+	@Test
+	public void TC_06_loginwithCorrectEmail_Password() throws InterruptedException {
+		driver.get("http://live.demoguru99.com/");
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("email")).sendKeys("automation_13@gmail.com");
+		driver.findElement(By.id("pass")).sendKeys("123123");
+		driver.findElement(By.id("send2")).click();
+		
+		
 	}
 	
 	@AfterClass
