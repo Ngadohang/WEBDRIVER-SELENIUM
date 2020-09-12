@@ -17,7 +17,7 @@ public class Topic_2_RunBrowerDriver {
     }
     @Test
     public void TC_Run_on_Chrome() {
-    	System.setProperty("webdriver.chrome.drive",".\\driver\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
     	driver=new ChromeDriver();
     	driver.get("http://www.facebook.com");
     	driver.quit(); 
@@ -25,7 +25,7 @@ public class Topic_2_RunBrowerDriver {
     
     @Test
     public void TC_Run_on_Edge_Chromium() {
-    	System.setProperty("webdriver.edge.drive", ".\\driver\\MicrosoftEdgeSetup.exe");
+    	System.setProperty("webdriver.edge.driver", ".\\driver\\msedgedriver.exe");
     	driver=new EdgeDriver();
     	driver.get("http://www.facebook.com");
     	driver.quit();
