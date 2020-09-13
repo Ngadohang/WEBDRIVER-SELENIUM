@@ -1,4 +1,4 @@
-package Xpath;
+package selenium;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
