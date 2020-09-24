@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -32,12 +33,17 @@ public class Topic_12_JavaScriptExecutor {
 	By emailTextbox = By.name("emailid");
 	By passwordTextbox = By.name("password");
 	
+	//String source_folder = System.getProperty("user.dir");
+	
 	
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
-		driver=new ChromeDriver();
-		//driver =new FirefoxDriver();
+		//System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.geckodriver.driver",".\\driver\\geckodriver.exe");
+		//Chặn nhật ký với cảnh báo 
+		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
+		//driver=new ChromeDriver();
+		driver =new FirefoxDriver();
 		js = (JavascriptExecutor) driver;
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -134,7 +140,7 @@ public class Topic_12_JavaScriptExecutor {
 		senkeyToElement(By.id("confirmation"), "123456");
 		
 		clickElementHidden(By.cssSelector("button[title='Register']"));
-		
+		sleepInSecond(5);
 		verityTextInInnerText("Thank you for registering with Main Website Store.");
 		
 		clickElementHidden(By.cssSelector("a[title='Log Out']"));

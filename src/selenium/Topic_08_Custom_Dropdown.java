@@ -167,12 +167,12 @@ public class Topic_08_Custom_Dropdown {
 					actualItem.click();
 					//jsExecutor.executeScript("arguments[0].click();",actualItem);
 					//Kiem tra so luong item da select= so luong item trong expectedItem thì cho dung vong lap
-					
-					List<WebElement> selectedItem= driver.findElements(child);
-					System.out.println("Selected Item"+ selectedItem.size());
-					if(selectedItem.size()==expectedItem.length) {
-						break;
 					}
+				List<WebElement> selectedItem= driver.findElements(child);
+				System.out.println("Selected Item"+ selectedItem.size());
+				if(selectedItem.size()==expectedItem.length) {
+					break;
+			
 				}
 			}
 		}

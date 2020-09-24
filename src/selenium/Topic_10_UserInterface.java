@@ -26,20 +26,20 @@ public class Topic_10_UserInterface {
 	}
 	
 	@Test
-	public void TC_1() {
-		
+	public void TC_1_leftClick() {
+		//click()
 	}
 	@Test
-	public void TC_2() {
-		
+	public void TC_2_doubleClick() {
+		//doubleClick()
 	}
 	@Test
-	public void TC_3() {
-		
+	public void TC_3_pressHover() {
+		//clickAndHold()
 	}
 	@Test
-	public void TC_4() {
-		
+	public void TC_4_hover() {
+		//contextClick()
 	}
 	@Test
 	public void TC_5_rightClick() {
@@ -57,6 +57,10 @@ public class Topic_10_UserInterface {
 		// using isDisplay()
 		Assert.assertTrue(driver.findElement(By.cssSelector(".context-menu-icon-quit.context-menu-hover.context-menu-visible")).isDisplayed());
 		
+	}
+	
+	public void TC_6_Key() {
+		//keyUp(),keyDown(),senKeys()
 	}
 	
 	@AfterClass

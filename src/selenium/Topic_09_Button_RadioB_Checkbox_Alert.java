@@ -1,5 +1,6 @@
 package selenium;
 
+import java.io.IOException;
 import java.sql.Driver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -20,6 +21,8 @@ public class Topic_09_Button_RadioB_Checkbox_Alert {
 	WebDriver driver;
 	JavascriptExecutor js;
 	WebDriverWait explicitWait;
+	String source_folder= System.getProperty("user.dir");
+
 	@BeforeClass
 	public void beforeClass() {
 		driver=new FirefoxDriver();
@@ -84,13 +87,25 @@ public class Topic_09_Button_RadioB_Checkbox_Alert {
 //		
 	}
 	
-	@Test
 	public void TC_04_AthenticationAlert() {
 		handleAthenticationAlert("http://the-internet.herokuapp.com/basic_auth","admin","admin");
 	}
 	
 	@Test
-	public void TC_04_AthenticationAlertAuto() {}
+	public void TC_04_AuthenticationAlertAuto() throws IOException {
+		String authenPath= source_folder + "\\autoIt\\authen_chrome.exe";
+		driver.get("http://the-internet.herokuapp.com/basic_auth");
+		String username="admin";
+		String password="admin";
+		sleepInSecond(5);
+		if(driver.toString().contains("firefox")) {
+			Runtime.getRuntime().exec(new String[] {authenPath,username,"password"});
+		}else if(driver.toString().contains("chrome")||driver.toString().contains("egde")) {
+			Runtime.getRuntime().exec(new String[] {authenPath,username,"password"});
+		}
+		sleepInSecond(5);
+		
+	}
 	
 	public void handleAthenticationAlert(String url,String username, String password) {
 		String slipUrl [] =url.split("//");
