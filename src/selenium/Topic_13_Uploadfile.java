@@ -1,7 +1,10 @@
 package selenium;
 
-import static org.testng.Assert.assertEquals;
-
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
@@ -13,10 +16,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
@@ -128,7 +129,6 @@ public class Topic_13_Uploadfile {
 	}
 	
 
-	@Test
 	public void TC_2_Chrome_Gofile(){
 		System.setProperty("webdriver.chrome.driver", source_folder +"\\driver\\chromedriver.exe");
 		driver =new ChromeDriver();
@@ -187,9 +187,39 @@ public class Topic_13_Uploadfile {
 		
 	}
 	
-	public void TC_5_Robot() {
+	@Test
+	public void TC_5_Robot() throws AWTException {
+		System.setProperty("webdriver.chrome.driver", source_folder +"\\driver\\chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		
+		driver.get("https://gofile.io/uploadFiles");
+		
+		driver.findElement(By.id("dropZoneBtnSelect")).click();
+		
+		StringSelection select =new StringSelection(image_path_01);
+		
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(select, null);	
+		
+		Robot robot= new Robot();
+		sleepInSecond(4);
+		
+		//nhan enter rui nha enter
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		//giu Ctrl +V
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		//bỏ Ctrl +V
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		//nhan enter rui nha enter
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 		
 	}
+	
 	
 	public void switchToWindowsById(String parentID) {
 		Set<String> allWindows= driver.getWindowHandles();

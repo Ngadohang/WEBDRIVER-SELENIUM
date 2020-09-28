@@ -1,21 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="1" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35036" started-at="2020-09-24T07:17:54Z" finished-at="2020-09-24T07:18:29Z">
+  <suite name="Default suite" duration-ms="93" started-at="2020-09-27T09:03:56Z" finished-at="2020-09-27T09:03:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35036" started-at="2020-09-24T07:17:54Z" finished-at="2020-09-24T07:18:29Z">
-      <class name="selenium.Topic_13_Uploadfile">
-        <test-method status="PASS" signature="TC_2_Chrome_Gofile()[pri:0, instance:selenium.Topic_13_Uploadfile@1810399e]" name="TC_2_Chrome_Gofile" duration-ms="34981" started-at="2020-09-24T07:17:54Z" finished-at="2020-09-24T07:18:29Z">
+    <test name="Default test" duration-ms="93" started-at="2020-09-27T09:03:56Z" finished-at="2020-09-27T09:03:56Z">
+      <class name="TestNG.Topic_07_Dependency">
+        <test-method status="FAIL" signature="TC_Register()[pri:0, instance:TestNG.Topic_07_Dependency@62ee68d8]" name="TC_Register" duration-ms="52" started-at="2020-09-27T09:03:56Z" finished-at="2020-09-27T09:03:56Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+at org.junit.Assert.fail(Assert.java:86)
+at org.junit.Assert.assertTrue(Assert.java:41)
+at org.junit.Assert.assertTrue(Assert.java:52)
+at TestNG.Topic_07_Dependency.TC_Register(Topic_07_Dependency.java:10)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_2_Chrome_Gofile -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:selenium.Topic_13_Uploadfile@1810399e]" name="afterClass" is-config="true" duration-ms="1" started-at="2020-09-24T07:18:29Z" finished-at="2020-09-24T07:18:29Z">
+        </test-method> <!-- TC_Register -->
+        <test-method status="SKIP" signature="TC_Login()[pri:0, instance:TestNG.Topic_07_Dependency@62ee68d8]" name="TC_Login" duration-ms="0" started-at="2020-09-27T09:03:56Z" depends-on-methods="TestNG.Topic_07_Dependency.TC_Register" finished-at="2020-09-27T09:03:56Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Topic_07_Dependency.TC_Login()[pri:0, instance:TestNG.Topic_07_Dependency@62ee68d8] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Topic_07_Dependency.TC_Login()[pri:0, instance:TestNG.Topic_07_Dependency@62ee68d8] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- selenium.Topic_13_Uploadfile -->
+        </test-method> <!-- TC_Login -->
+      </class> <!-- TestNG.Topic_07_Dependency -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+  	<test name="Run on firefox">
+  		<parameter name="browserName" value="firefox"/>
+		<classes>
+			<class name="TestNG.Topic_05_Parameter_Multi_Browns"/>
+		</classes>
+	</test> 
+  	<test name="Run on chrome">
+  		<parameter name="browserName" value="chrome"/>
+		<classes>
+			<class name="TestNG.Topic_05_Parameter_Multi_Browns"/>
+		</classes>
+	</test> 
+  	<test name="Run on egde">
+  		<parameter name="browserName" value="egde"/>
+		<classes>
+			<class name="TestNG.Topic_05_Parameter_Multi_Browns"/>
+		</classes>
+	</test> 
+</suite> 
